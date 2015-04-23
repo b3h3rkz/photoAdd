@@ -1,0 +1,41 @@
+<!--
+  created by pyc0d333 aka Parah
+-->
+
+<!DOCTYPE html>
+<head lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <meta charset="UTF-8">
+    <title>picDrop</title>
+    <script src="bower_components/angular/angular.js"></script>
+<script scr="app/app.js"></script>
+</head>
+<body ng-app="app" ng-controller="AppCtrl as app">
+{{ app.message }}
+<section>
+
+<button ng-click="app.PhotoAdd()">drop a pic</button>
+<div ng-repeat="pin in app.files">
+ <img src="{{ pin.image }}" alt=""/>
+</div>
+
+    <div class="ui">
+        <input type="text" ng-model="pin.title">
+        <button ng-click="app.updatePin(pin)">update this picture</button>
+        <button ng-click="app.deletePin(pin)">delete this photo</button>
+
+
+
+    </div>
+</section>
+
+<div>
+<footer>
+    <p>copyright 2014 Parah</p>
+    <a href="#">privacy policy</a>
+    <a href="#">Terms of service</a>
+    <a href="#">About us</a>
+
+</footer>
+</div>
+</body>
+</html>
